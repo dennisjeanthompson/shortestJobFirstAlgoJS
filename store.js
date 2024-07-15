@@ -82,6 +82,10 @@ class food{
         this.isAvailable = true; 
 
     }
+foodDisplayDetails()
+{
+    
+}
 
 
 }
@@ -96,6 +100,11 @@ this.name = name ;
 this.age= age;
 this.address= address;
 this.gender = gender;
+    }
+    buyFood(store,food)
+    {
+        store.buyFood = false;
+
     }
 }
 

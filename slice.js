@@ -7,3 +7,7 @@ console.log(any);
 let as =  array[0].slice(0,1);
 console.log(as);
 console.log(array[0].slice(0,1));
+const newarg = [99,999,1]
+
+console.log(newarg.shift((a) => a++));
+
