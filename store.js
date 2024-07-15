@@ -9,6 +9,30 @@ constructor(location)
 //this.food = food;
 //this.priceOfFood = priceOfFood;
 this.location = location
+this.storage = [ ]
+}
+
+addFood(food,price)
+{
+    this.storage.push({name:food, price:price})
+
+}
+removeFood(food)
+{
+    for(let i=0;i<this.storage.length;i++)
+    {
+        if(this.storage[i].name === food)
+        {
+            this.storage.splice(i,1);
+            break;
+        }
+    }
+
+}
+displayLocation()
+{
+    console.log(`store is in ${this.location}`);
+
 }
 
 displayFooDName(food)
@@ -19,11 +43,11 @@ displayFooDName(food)
     }
 
 }
-DisplayFoodPrice(price)
+displayFoodPrice(price)
 {
 for(var az  of price)
 {
-    console.log(az.price + az.prc);
+    console.log( `name: ${az.name} price: ${az.price}`);
 
 }
 }
@@ -76,11 +100,12 @@ this.gender = gender;
 }
 
 let storage  = [ "banana ", "mangoe","apple","cocktail","orange"]
-let storage2 = [{"name":"cock"},{"name":"marshmallow"},{"name":"peanut"}]
+let storage2 = [{"name":"cock","price":1002},{"name":"marshmallow","price":9000},{"name":"peanut","price":999999}]
 console.log(storage2[0].name);
 
 const storeClass =  new store("japan")
 storeClass.displayFooDName(storage2);
 
 storeClass.displayFoodPrice(storage2);
+storeClass.addFood("cock",9000);
 
